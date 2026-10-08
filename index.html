@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TOG&amp;THER · Soirée du 10 novembre 2026 à thecamp — DJ Bens, Triangle des Bermudes</title>
+<meta name="description" content="TOG&amp;THER (Together), la soirée veille de jour férié du mardi 10 novembre 2026 à thecamp. Line-up : Triangle des Bermudes, DJ Bens, Andyman, Taylor Sossa et Scanna.">
+<meta name="keywords" content="TOG&amp;THER, Together, soirée, thecamp, 10 novembre 2026, veille de jour férié, DJ Bens, Triangle des Bermudes, Andyman, Taylor Sossa, Scanna, NRJ">
+<meta name="theme-color" content="#941B0C">
+
+<!-- ================= SEO =================
+     SITE_URL actuel (test) : https://flomdev.github.io/togandther/
+     Au passage sur le domaine définitif : remplacer cette URL partout (canonical, og:url, og:image,
+     twitter:image, JSON-LD, robots.txt, sitemap.xml) et SUPPRIMER la balise robots "noindex" ci-dessous. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://flomdev.github.io/togandther/">
+<link rel="alternate" hreflang="fr" href="https://flomdev.github.io/togandther/">
+
+<!-- Partage réseaux sociaux (Open Graph / X) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TOG&amp;THER">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://flomdev.github.io/togandther/">
+<meta property="og:title" content="TOG&amp;THER · 10.11.26 à thecamp">
+<meta property="og:description" content="Veille de jour férié. Triangle des Bermudes, DJ Bens, Andyman, Taylor Sossa, Scanna.">
+<meta property="og:image" content="https://flomdev.github.io/togandther/assets/img/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TOG&amp;THER, 10-11-26 à thecamp : Triangle des Bermudes, DJ Bens, Andyman, Taylor Sossa, Scanna">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TOG&amp;THER · 10.11.26 à thecamp">
+<meta name="twitter:description" content="Veille de jour férié. Triangle des Bermudes, DJ Bens, Andyman, Taylor Sossa, Scanna.">
+<meta name="twitter:image" content="https://flomdev.github.io/togandther/assets/img/og-image.jpg">
+<meta name="twitter:image:alt" content="Visuel TOG&amp;THER, 10-11-26 à thecamp">
+
+<!-- Icônes -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="preload" href="assets/fonts/futura-bold.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="assets/logo/logo-jaune.svg" as="image">
+
+<!-- Données structurées (Google : résultats enrichis « Événement ») -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicEvent",
+  "name": "TOG&THER",
+  "alternateName": "Together",
+  "description": "Soirée TOG&THER, veille de jour férié, à thecamp. Avec Triangle des Bermudes, DJ Bens, Andyman, Taylor Sossa et Scanna.",
+  "url": "https://flomdev.github.io/togandther/",
+  "startDate": "2026-11-10",
+  "endDate": "2026-11-11",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "inLanguage": "fr",
+  "image": [
+    "https://flomdev.github.io/togandther/assets/img/og-image.jpg",
+    "https://flomdev.github.io/togandther/assets/img/affiche.jpg"
+  ],
+  "location": {
+    "@type": "Place",
+    "name": "thecamp"
+  },
+  "performer": [
+    {"@type": "MusicGroup", "name": "Triangle des Bermudes"},
+    {"@type": "Person", "name": "DJ Bens"},
+    {"@type": "Person", "name": "Andyman"},
+    {"@type": "Person", "name": "Taylor Sossa"},
+    {"@type": "Person", "name": "Scanna"}
+  ],
+  "sponsor": {"@type": "Organization", "name": "NRJ"}
+}
+</script>
+
+<style>
+/* ---------- Typographies de la charte (Futura 100) ---------- */
+@font-face{font-family:"Futura TT";src:local("Futura Bold"),local("Futura-Bold"),url("assets/fonts/futura-bold.ttf") format("truetype");font-weight:700;font-display:swap}
+@font-face{font-family:"Futura TT";src:local("Futura Medium"),local("Futura-Medium"),url("assets/fonts/futura-medium.ttf") format("truetype");font-weight:500;font-display:swap}
+@font-face{font-family:"Futura TT";src:url("assets/fonts/futura-book.ttf") format("truetype");font-weight:400;font-display:swap}
+
+/* ---------- Couleurs de la charte ---------- */
+:root{
+  --ink:#220901;
+  --red:#941B0C;
+  --rust:#BD3908;
+  --gold:#F6AA1C;
+  --cream:#FFFFEE;
+  --font:"Futura TT","Futura",system-ui,sans-serif;
+  --gutter:clamp(16px,5vw,64px);
+  --header-h:68px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--header-h);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--font);font-size:clamp(1rem,.95rem + .25vw,1.15rem);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,p{margin:0}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.skip{position:absolute;left:16px;top:-60px;z-index:100;background:var(--gold);color:var(--ink);padding:10px 16px;border-radius:999px;font-weight:700;text-decoration:none}
+.skip:focus{top:12px}
+.wrap{max-width:1200px;margin-inline:auto;padding-inline:var(--gutter)}
+
+/* Titres = Bold capitales / sous-titres = Medium / texte = Book */
+.title{font-weight:700;text-transform:uppercase;line-height:.95;letter-spacing:-.01em;font-size:clamp(2.6rem,1.6rem + 5vw,5.5rem)}
+.subtitle{font-weight:500;text-transform:uppercase;letter-spacing:.04em;line-height:1.15;font-size:clamp(1.1rem,1rem + .6vw,1.5rem)}
+
+/* Étiquette « scotch » jaune (reprise des flyers) */
+.tape{display:inline-block;background:var(--gold);color:var(--cream);font-weight:700;text-transform:uppercase;letter-spacing:.02em;padding:.2em .7em;transform:rotate(-3deg);font-size:clamp(.9rem,.8rem + .5vw,1.2rem);text-shadow:0 1px 0 rgba(34,9,1,.15)}
+.tape--ink{color:var(--ink);text-shadow:none}
+
+/* Bouton d'action en #F6AA1C */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:48px;padding:.8em 1.7em;border-radius:999px;border:2px solid var(--gold);background:var(--gold);color:var(--ink);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.95rem;text-decoration:none;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background-color .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(34,9,1,.6)}
+.btn--ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn--ghost:hover{background:var(--cream);color:var(--red);border-color:var(--cream)}
+.btn--sm{min-height:42px;padding:.5em 1.2em;font-size:.82rem}
+
+/* Cadre déchiré de la charte (assets/img/cadre.png) */
+.torn{position:relative;border:clamp(10px,1.6vw,18px) solid transparent;border-image:url("assets/img/cadre.png") 70 round;background:var(--red)}
+.torn img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- En-tête ---------- */
+.header{position:fixed;inset:0 0 auto;z-index:50;height:var(--header-h);color:var(--cream);transition:background-color .3s,box-shadow .3s,color .3s}
+.header.is-scrolled{background:var(--cream);color:var(--ink);box-shadow:0 8px 30px -18px rgba(34,9,1,.4)}
+.header .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{display:block;height:26px}
+.brand img{height:100%;width:auto}
+.brand .logo-dark,.header.is-scrolled .brand .logo-light{display:none}
+.header.is-scrolled .brand .logo-dark{display:block}
+.nav{display:flex;align-items:center;gap:.5rem}
+.nav ul{list-style:none;margin:0;padding:0;display:none;gap:.2rem}
+.nav ul a{display:block;padding:.5em .8em;text-decoration:none;font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-size:.85rem;background-image:linear-gradient(currentColor,currentColor);background-size:0 2px;background-repeat:no-repeat;background-position:.8em calc(100% - .35em);transition:background-size .3s var(--ease)}
+.nav ul a:hover{background-size:calc(100% - 1.6em) 2px}
+.burger{display:grid;place-items:center;width:48px;height:48px;border:0;background:transparent;color:inherit;cursor:pointer}
+.burger span,.burger span::before,.burger span::after{display:block;width:24px;height:2px;background:currentColor;transition:transform .3s var(--ease),background .2s}
+.burger span{position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-7px}.burger span::after{top:7px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span::after{transform:translateY(-7px) rotate(-45deg)}
+.menu{position:fixed;inset:var(--header-h) 0 0;z-index:49;background:var(--red);color:var(--cream);padding:2rem var(--gutter);display:flex;flex-direction:column;gap:2rem;opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s}
+.menu.is-open{opacity:1;visibility:visible;transition:opacity .3s}
+.menu ul{list-style:none;margin:0;padding:0}
+.menu li+li{border-top:1px solid rgba(255,255,238,.2)}
+.menu a:not(.btn){display:block;padding:.7rem 0;font-weight:700;text-transform:uppercase;font-size:clamp(1.7rem,8vw,2.4rem);text-decoration:none}
+.menu a:not(.btn):hover{color:var(--gold)}
+.header.menu-active{background:var(--red);color:var(--cream);box-shadow:none}
+.header.menu-active .brand .logo-light{display:block}.header.menu-active .brand .logo-dark{display:none}
+body.menu-open{overflow:hidden}
+@media (min-width:900px){.nav ul{display:flex}.burger,.menu{display:none}}
+
+/* ---------- Accueil ---------- */
+.hero{background:var(--red);color:var(--cream);min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:calc(var(--header-h) + 2rem) 0 3.5rem;overflow:hidden}
+.hero .wrap{display:grid;gap:2.5rem;align-items:center;width:100%}
+.hero__text{display:grid;gap:1.4rem;justify-items:start}
+.hero__date{font-weight:700;font-size:clamp(2rem,1.4rem + 3vw,3.6rem);line-height:1;color:var(--gold);letter-spacing:.01em}
+.hero h1{width:100%;max-width:640px;margin-top:-.4rem}
+.hero h1 img{width:100%}
+.hero__where{font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-size:clamp(1rem,.9rem + .5vw,1.3rem)}
+.hero__where strong,.place__info strong{text-transform:none;letter-spacing:0}
+.hero__where strong{color:var(--gold);font-weight:700}
+.hero__cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.5rem;width:100%;max-width:460px}
+.countdown div{background:var(--ink);border-radius:12px;padding:.75rem .3rem .6rem;text-align:center}
+.countdown b{display:block;font-weight:700;font-size:clamp(1.6rem,1.2rem + 2vw,2.5rem);line-height:1;color:var(--gold);font-variant-numeric:tabular-nums}
+.countdown span{display:block;margin-top:.3rem;font-size:.7rem;font-weight:500;text-transform:uppercase;letter-spacing:.12em}
+.hero__poster{justify-self:center;width:min(100%,440px);transform:rotate(2deg);box-shadow:0 30px 60px -30px rgba(34,9,1,.8);border:0;background:none}
+@media (min-width:900px){.hero .wrap{grid-template-columns:1.15fr .85fr}}
+
+/* ---------- Sections ---------- */
+.section{padding-block:clamp(4.5rem,9vw,8rem)}
+.section__head{margin-bottom:clamp(2.5rem,5vw,4rem);display:grid;gap:1rem;justify-items:start}
+
+/* Line-up */
+.headliners{display:grid;gap:clamp(1.5rem,3vw,2.5rem)}
+.artist{display:grid;gap:1.2rem}
+.artist .torn{aspect-ratio:4/3}
+.artist h3{font-weight:700;text-transform:uppercase;line-height:.95;font-size:clamp(2rem,1.5rem + 2.5vw,3.4rem);color:var(--red)}
+.artist:nth-child(2) h3{color:var(--rust)}
+@media (min-width:768px){.headliners{grid-template-columns:1fr 1fr}}
+.support{margin-top:clamp(2.5rem,5vw,4rem);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.4rem 1.2rem;text-align:center}
+.support .subtitle{width:100%;color:var(--rust);margin-bottom:.4rem}
+.support strong{font-weight:500;text-transform:uppercase;font-size:clamp(1.6rem,1.1rem + 2.6vw,3rem);line-height:1.1}
+.support i{color:var(--gold);font-style:normal;font-weight:700;font-size:clamp(1.4rem,1rem + 2vw,2.4rem)}
+
+/* Lieu */
+.place{background:var(--ink);color:var(--cream)}
+.place .subtitle{color:var(--gold)}
+.gallery{display:grid;gap:.8rem;grid-template-columns:1fr 1fr}
+.gallery figure{margin:0;position:relative;overflow:hidden;border-radius:14px;aspect-ratio:4/3}
+.gallery figure:first-child{grid-column:1/-1;aspect-ratio:16/9}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;left:.7rem;bottom:.7rem;background:rgba(34,9,1,.75);color:var(--cream);font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-size:.72rem;padding:.35em .8em;border-radius:999px}
+.place__info{margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between}
+.place__info p{font-weight:500;text-transform:uppercase;letter-spacing:.05em}
+.place__info strong{color:var(--gold)}
+@media (min-width:900px){.gallery{grid-template-columns:2fr 1fr 1fr}.gallery figure:first-child{grid-column:auto;grid-row:span 2;aspect-ratio:auto}}
+
+/* Billetterie */
+.tickets{background:var(--gold);text-align:center}
+.tickets .wrap{display:grid;gap:1.5rem;justify-items:center}
+.tickets .title{color:var(--red)}
+.tickets .btn{background:var(--red);border-color:var(--red);color:var(--cream)}
+.tickets .subtitle{max-width:32ch}
+
+/* Partenaires */
+.partners{text-align:center}
+.partners ul{list-style:none;margin:2rem 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2rem 3rem}
+.partners li{display:grid;justify-items:center;gap:.6rem;font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:.75rem;color:var(--rust)}
+.partners img{height:90px;width:auto}
+.partners .thecamp{font-weight:500;font-size:2.4rem;letter-spacing:0;text-transform:none;color:var(--red);line-height:90px}
+
+/* Pied de page */
+.footer{background:var(--red);color:var(--cream);padding:3.5rem 0 2rem}
+.footer .wrap{display:grid;gap:2rem;justify-items:center;text-align:center}
+.footer img{width:min(320px,80%)}
+.footer p{font-weight:500;text-transform:uppercase;letter-spacing:.06em}
+.footer nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 1.4rem;font-size:.9rem}
+.footer nav a{text-decoration:none}
+.footer nav a:hover{color:var(--gold);text-decoration:underline}
+.footer small{opacity:.75}
+
+/* Apparition au défilement */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .reveal.is-in{opacity:1;transform:none}
+.js .reveal.d1{transition-delay:.1s}.js .reveal.d2{transition-delay:.2s}
+.js .hero__poster.reveal.is-in{transform:rotate(2deg)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header class="header" id="header">
+  <div class="wrap">
+    <a class="brand" href="#accueil" aria-label="TOG&amp;THER — accueil">
+      <img class="logo-light" src="assets/logo/logo-jaune.svg" alt="" width="93" height="26">
+      <img class="logo-dark" src="assets/logo/logo-rouge.svg" alt="" width="93" height="26">
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="#line-up">Line-up</a></li>
+        <li><a href="#lieu">Le lieu</a></li>
+        <li><a href="#partenaires">Partenaires</a></li>
+      </ul>
+      <a class="btn btn--sm" href="#billetterie">Réserver</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span></button>
+    </nav>
+  </div>
+</header>
+<div class="menu" id="menu">
+  <ul>
+    <li><a href="#line-up">Line-up</a></li>
+    <li><a href="#lieu">Le lieu</a></li>
+    <li><a href="#billetterie">Billetterie</a></li>
+    <li><a href="#partenaires">Partenaires</a></li>
+  </ul>
+  <a class="btn" href="#billetterie">Réserver</a>
+</div>
+
+<main id="contenu">
+
+<!-- ACCUEIL -->
+<section class="hero" id="accueil" aria-labelledby="titre">
+  <div class="wrap">
+    <div class="hero__text">
+      <p class="hero__date reveal"><time datetime="2026-11-10">10 - 11 - 26</time></p>
+      <span class="tape reveal d1">Veille de jour férié</span>
+      <h1 id="titre" class="reveal d1"><img src="assets/logo/logo-jaune.svg" alt="TOG&amp;THER" width="876" height="246"></h1>
+      <p class="hero__where reveal d2">Mardi 10 novembre 2026 · <strong>thecamp</strong></p>
+      <div class="hero__cta reveal d2">
+        <a class="btn" href="#billetterie">Réserver ma place</a>
+        <a class="btn btn--ghost" href="#line-up">Voir le line-up</a>
+      </div>
+      <div class="countdown reveal d2" id="countdown" role="timer" aria-label="Temps restant avant le 10 novembre 2026" data-target="2026-11-10T00:00:00+01:00">
+        <div><b data-u="d">--</b><span>Jours</span></div>
+        <div><b data-u="h">--</b><span>Heures</span></div>
+        <div><b data-u="m">--</b><span>Min</span></div>
+        <div><b data-u="s">--</b><span>Sec</span></div>
+      </div>
+    </div>
+    <img class="hero__poster reveal d1" src="assets/img/affiche.jpg" width="1080" height="1440" alt="Affiche TOG&amp;THER : 10-11-26 à thecamp, DJ Bens, Andyman, Taylor Sossa, Scanna">
+  </div>
+</section>
+
+<!-- LINE-UP -->
+<section class="section" id="line-up" aria-labelledby="lineup-titre">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="tape reveal">Line-up</span>
+      <h2 class="title reveal" id="lineup-titre">Sur scène</h2>
+    </div>
+    <div class="headliners">
+      <article class="artist reveal">
+        <div class="torn"><img src="assets/img/triangle-des-bermudes.jpg" width="1600" height="1066" alt="Les trois membres de Triangle des Bermudes" loading="lazy"></div>
+        <h3>Triangle des Bermudes</h3>
+      </article>
+      <article class="artist reveal d1">
+        <div class="torn"><img src="assets/img/dj-bens.jpg" width="1200" height="937" alt="DJ Bens, casquette noire, la main sur la tête" loading="lazy"></div>
+        <h3>DJ Bens</h3>
+      </article>
+    </div>
+    <div class="support reveal">
+      <p class="subtitle">Avec</p>
+      <strong>Andyman</strong><i aria-hidden="true">&amp;</i><strong>Taylor Sossa</strong><i aria-hidden="true">&amp;</i><strong>Scanna</strong>
+    </div>
+  </div>
+</section>
+
+<!-- LIEU -->
+<section class="section place" id="lieu" aria-labelledby="lieu-titre">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="tape reveal">Le lieu</span>
+      <h2 class="title reveal" id="lieu-titre" style="text-transform:none">thecamp</h2>
+    </div>
+    <div class="gallery">
+      <figure class="reveal"><img src="assets/img/thecamp-canopee.jpg" width="1600" height="900" alt="La canopée de thecamp au coucher du soleil" loading="lazy"><figcaption>La Canopée</figcaption></figure>
+      <figure class="reveal d1"><img src="assets/img/thecamp-dome-soiree.jpg" width="1600" height="900" alt="Soirée sous le Dôme de thecamp, foule et lumières colorées" loading="lazy"><figcaption>Le Dôme</figcaption></figure>
+      <figure class="reveal d2"><img src="assets/img/thecamp-dome-nuit.jpg" width="1500" height="1000" alt="Le Dôme de thecamp illuminé de nuit" loading="lazy"><figcaption>Le Dôme, de nuit</figcaption></figure>
+      <figure class="reveal d1"><img src="assets/img/thecamp-theatre-de-verdure.jpg" width="1200" height="1600" alt="Soirée au Théâtre de verdure de thecamp au coucher du soleil" loading="lazy"><figcaption>Théâtre de verdure</figcaption></figure>
+      <figure class="reveal d2"><img src="assets/img/thecamp-vue-aerienne.jpg" width="1600" height="899" alt="Vue aérienne du site de thecamp dans la garrigue" loading="lazy"><figcaption>Vue aérienne</figcaption></figure>
+    </div>
+    <div class="place__info reveal">
+      <p>Mardi 10 novembre 2026 · <strong>thecamp</strong></p>
+      <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=thecamp" target="_blank" rel="noopener">Itinéraire<span class="sr-only"> (nouvel onglet)</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- BILLETTERIE -->
+<section class="section tickets" id="billetterie" aria-labelledby="billet-titre">
+  <div class="wrap">
+    <span class="tape tape--ink reveal" style="background:var(--cream)">10 - 11 - 26</span>
+    <h2 class="title reveal" id="billet-titre">Billetterie</h2>
+    <p class="subtitle reveal">Veille de jour férié à <span style="text-transform:none">thecamp</span></p>
+    <!-- À REMPLACER : lien de la billetterie -->
+    <a class="btn reveal" href="#" id="lien-billetterie">Réserver ma place</a>
+  </div>
+</section>
+
+<!-- PARTENAIRES -->
+<section class="section partners" id="partenaires" aria-labelledby="part-titre">
+  <div class="wrap">
+    <span class="tape reveal">Partenaires</span>
+    <h2 class="sr-only" id="part-titre">Partenaires</h2>
+    <ul>
+      <li class="reveal"><span class="thecamp" role="img" aria-label="thecamp">thecamp</span>Lieu</li>
+      <li class="reveal d1"><img src="assets/img/nrj.png" width="300" height="300" alt="NRJ" loading="lazy">Partenaire média</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <img src="assets/logo/logo-jaune.svg" alt="TOG&amp;THER" width="876" height="246" loading="lazy">
+    <p>10 - 11 - 26 · <span style="text-transform:none">thecamp</span></p>
+    <nav aria-label="Liens de pied de page">
+      <ul>
+        <li><a href="#line-up">Line-up</a></li>
+        <li><a href="#billetterie">Billetterie</a></li>
+        <li><a href="#lieu">Le lieu</a></li>
+        <!-- À COMPLÉTER : contact, réseaux sociaux, mentions légales -->
+      </ul>
+    </nav>
+    <small>© 2026 TOG&amp;THER</small>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.documentElement.classList.add("js");
+  var header = document.getElementById("header");
+  function onScroll(){ header.classList.toggle("is-scrolled", window.scrollY > 40); }
+  onScroll(); window.addEventListener("scroll", onScroll, {passive:true});
+
+  /* Menu mobile */
+  var burger = document.querySelector(".burger"), menu = document.getElementById("menu");
+  function setMenu(open){
+    burger.setAttribute("aria-expanded", String(open));
+    burger.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
+    menu.classList.toggle("is-open", open);
+    header.classList.toggle("menu-active", open);
+    document.body.classList.toggle("menu-open", open);
+  }
+  burger.addEventListener("click", function(){ setMenu(burger.getAttribute("aria-expanded") !== "true"); });
+  menu.addEventListener("click", function(e){ if (e.target.closest("a")) setMenu(false); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape" && menu.classList.contains("is-open")) { setMenu(false); burger.focus(); } });
+
+  /* Compte à rebours */
+  var cd = document.getElementById("countdown"), target = new Date(cd.dataset.target).getTime(), u = {};
+  cd.querySelectorAll("[data-u]").forEach(function(el){ u[el.dataset.u] = el; });
+  function pad(n){ return String(n).padStart(2, "0"); }
+  function tick(){
+    var t = Math.max(0, target - Date.now());
+    u.d.textContent = Math.floor(t / 864e5);
+    u.h.textContent = pad(Math.floor(t / 36e5) % 24);
+    u.m.textContent = pad(Math.floor(t / 6e4) % 60);
+    u.s.textContent = pad(Math.floor(t / 1e3) % 60);
+    if (!t) clearInterval(timer);
+  }
+  tick(); var timer = setInterval(tick, 1000);
+
+  /* Apparition au défilement */
+  var els = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    els.forEach(function(el){ el.classList.add("is-in"); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); } });
+    }, {rootMargin:"0px 0px -8% 0px", threshold:.08});
+    els.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

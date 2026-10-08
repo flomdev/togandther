@@ -1,0 +1,6 @@
+# Version de test : l'indexation est bloquée par la balise <meta name="robots" content="noindex">.
+# On laisse le crawl ouvert pour que les moteurs puissent lire cette balise.
+User-agent: *
+Allow: /
+
+Sitemap: https://flomdev.github.io/togandther/sitemap.xml
