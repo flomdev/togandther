@@ -247,21 +247,46 @@ body.menu-open{overflow:hidden}
 @keyframes bar{0%{transform:translateX(-110%)}100%{transform:translateX(280%)}}
 
 /* Apparition au défilement */
-.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
-.js .reveal.is-in{opacity:1;transform:none}
-.js .reveal.d1{transition-delay:.1s}.js .reveal.d2{transition-delay:.2s}
-.js .hero__poster.reveal.is-in{transform:rotate(2deg)}
+/* Bandeaux défilants du line-up */
+.marquees{position:relative;overflow:hidden;background:var(--cream);padding:clamp(3rem,6vw,5rem) 0;display:grid}
+.marquee{grid-area:1/1;width:110%;margin-left:-5%;overflow:hidden;padding:.9rem 0}
+.marquee--a{background:var(--ink);color:var(--cream);transform:rotate(-3deg);z-index:1}
+.marquee--b{background:var(--gold);color:var(--red);transform:rotate(2.5deg)}
+.marquee__track{display:flex;width:max-content;animation:marquee 32s linear infinite}
+.marquee--b .marquee__track{animation-direction:reverse;animation-duration:38s}
+.marquee__group{display:flex;align-items:center;gap:clamp(1rem,2.5vw,2rem);padding-right:clamp(1rem,2.5vw,2rem)}
+.marquee span{font-weight:700;text-transform:uppercase;white-space:nowrap;line-height:1;font-size:clamp(2rem,1.2rem + 4.5vw,5.5rem)}
+.marquee span:nth-of-type(even){color:transparent;-webkit-text-stroke:2px currentColor}
+.marquee--a span:nth-of-type(even){-webkit-text-stroke-color:var(--cream)}
+.marquee--b span:nth-of-type(even){-webkit-text-stroke-color:var(--red)}
+.marquee svg{flex:none;width:clamp(1.8rem,1rem + 3.5vw,4.2rem);height:auto;color:var(--gold);animation:spin 6s linear infinite}
+.marquee--b svg{color:var(--ink)}
+.marquee:hover .marquee__track{animation-play-state:paused}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Révélé « papier déchiré » des photos d'artistes */
+.js .torn{clip-path:polygon(0% 112%,10% 105%,20% 113%,30% 104%,40% 110%,50% 103%,60% 112%,70% 105%,80% 111%,90% 104%,100% 109%,100% 100%,0% 100%);transition:clip-path 1.2s cubic-bezier(.7,0,.2,1)}
+.js .torn.is-in{clip-path:polygon(0% -4%,10% -11%,20% -3%,30% -12%,40% -6%,50% -13%,60% -4%,70% -11%,80% -5%,90% -12%,100% -7%,100% 100%,0% 100%)}
+.js .torn img{transform:scale(1.18);transition:transform 1.6s var(--ease)}
+.js .torn.is-in img{transform:none}
+.artist:nth-child(2) .torn{transition-delay:.15s}
+.artist:nth-child(2) .torn img{transition-delay:.15s}
+.artist .torn{transition-property:clip-path,transform}
+.artist:hover .torn{transform:rotate(-1.2deg)}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important;animation:none!important}
-  .js .reveal{opacity:1;transform:none}
+  .js .torn{clip-path:none}
+  .js .torn img{transform:none}
 }
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="amp" viewBox="879 452 151 178"><path fill="currentColor" d="M 926.8 566.3 C 922.0 548.1 936.4 531.6 954.4 525.8 L 979.2 517.8 C 994.4 512.9 1003.9 498.6 1005.7 482.9 C 1005.8 481.8 1006.2 480.5 1006.6 479.9 C 1007.1 479.4 1009.0 479.1 1009.8 479.2 L 1025.6 481.2 C 1026.8 481.4 1028.4 483.5 1028.3 485.0 C 1026.4 499.7 1019.7 512.8 1009.0 523.0 C 1007.5 524.5 1006.8 527.3 1006.9 529.4 L 1008.5 546.5 C 1009.3 555.5 1007.7 564.6 1004.7 573.3 C 997.2 594.7 980.4 611.7 959.2 619.6 C 937.2 627.8 918.8 621.1 902.1 606.1 C 894.3 599.1 889.3 590.5 886.8 580.3 C 881.2 557.8 887.2 534.3 902.8 517.3 C 907.7 511.9 914.1 507.6 920.0 504.2 C 923.3 502.4 916.7 496.9 915.0 487.1 C 913.5 478.6 916.5 470.7 922.9 465.2 C 931.8 457.7 947.7 454.3 958.8 458.9 C 967.4 462.4 974.8 468.0 980.0 476.2 L 968.7 484.3 C 967.6 485.1 964.3 485.0 963.5 483.9 C 958.9 477.6 951.8 474.4 944.0 475.7 C 941.0 476.2 938.4 478.7 937.5 481.0 C 934.9 487.9 941.2 493.7 949.0 497.1 L 952.0 517.1 C 940.5 518.5 930.8 522.9 923.5 531.6 C 915.3 541.3 910.6 553.4 911.4 566.3 C 911.9 575.1 915.2 583.5 921.6 589.3 C 930.1 596.9 941.4 598.5 951.6 593.6 C 983.3 578.3 983.2 538.3 975.2 539.9 C 967.1 541.4 959.7 544.5 954.2 550.2 C 949.9 554.5 949.3 560.5 952.8 565.4 C 953.9 566.8 954.0 569.4 952.8 570.6 L 941.7 581.8 C 940.3 583.2 937.9 583.5 936.3 581.7 C 932.5 577.4 928.4 572.4 926.8 566.3Z M 926.8 566.3 "/></symbol></svg>
 <div class="loader" id="loader" aria-hidden="true">
   <div class="loader__in">
-    <svg viewBox="879 452 151 178"><path fill="currentColor" d="M 926.8 566.3 C 922.0 548.1 936.4 531.6 954.4 525.8 L 979.2 517.8 C 994.4 512.9 1003.9 498.6 1005.7 482.9 C 1005.8 481.8 1006.2 480.5 1006.6 479.9 C 1007.1 479.4 1009.0 479.1 1009.8 479.2 L 1025.6 481.2 C 1026.8 481.4 1028.4 483.5 1028.3 485.0 C 1026.4 499.7 1019.7 512.8 1009.0 523.0 C 1007.5 524.5 1006.8 527.3 1006.9 529.4 L 1008.5 546.5 C 1009.3 555.5 1007.7 564.6 1004.7 573.3 C 997.2 594.7 980.4 611.7 959.2 619.6 C 937.2 627.8 918.8 621.1 902.1 606.1 C 894.3 599.1 889.3 590.5 886.8 580.3 C 881.2 557.8 887.2 534.3 902.8 517.3 C 907.7 511.9 914.1 507.6 920.0 504.2 C 923.3 502.4 916.7 496.9 915.0 487.1 C 913.5 478.6 916.5 470.7 922.9 465.2 C 931.8 457.7 947.7 454.3 958.8 458.9 C 967.4 462.4 974.8 468.0 980.0 476.2 L 968.7 484.3 C 967.6 485.1 964.3 485.0 963.5 483.9 C 958.9 477.6 951.8 474.4 944.0 475.7 C 941.0 476.2 938.4 478.7 937.5 481.0 C 934.9 487.9 941.2 493.7 949.0 497.1 L 952.0 517.1 C 940.5 518.5 930.8 522.9 923.5 531.6 C 915.3 541.3 910.6 553.4 911.4 566.3 C 911.9 575.1 915.2 583.5 921.6 589.3 C 930.1 596.9 941.4 598.5 951.6 593.6 C 983.3 578.3 983.2 538.3 975.2 539.9 C 967.1 541.4 959.7 544.5 954.2 550.2 C 949.9 554.5 949.3 560.5 952.8 565.4 C 953.9 566.8 954.0 569.4 952.8 570.6 L 941.7 581.8 C 940.3 583.2 937.9 583.5 936.3 581.7 C 932.5 577.4 928.4 572.4 926.8 566.3Z M 926.8 566.3 "/></svg>
+    <svg viewBox="0 0 151 178"><use href="#amp"/></svg>
     <div class="loader__bar"></div>
   </div>
 </div>
@@ -300,43 +325,49 @@ body.menu-open{overflow:hidden}
 <section class="hero" id="accueil" aria-labelledby="titre">
   <div class="wrap">
     <div class="hero__text">
-      <p class="hero__date reveal"><time datetime="2026-11-10">10 - 11 - 26</time></p>
-      <span class="tape reveal d1">Veille de jour férié</span>
-      <h1 id="titre" class="reveal d1"><img src="assets/logo/logo-jaune.svg" alt="TOG&amp;THER" width="876" height="246"></h1>
-      <p class="hero__where reveal d2">Mardi 10 novembre 2026 · <strong>thecamp</strong></p>
-      <div class="hero__cta reveal d2">
+      <p class="hero__date"><time datetime="2026-11-10">10 - 11 - 26</time></p>
+      <span class="tape">Veille de jour férié</span>
+      <h1 id="titre"><img src="assets/logo/logo-jaune.svg" alt="TOG&amp;THER" width="876" height="246"></h1>
+      <p class="hero__where">Mardi 10 novembre 2026 · <strong>thecamp</strong></p>
+      <div class="hero__cta">
         <a class="btn" href="#billetterie">Réserver ma place</a>
         <a class="btn btn--ghost" href="#line-up">Voir le line-up</a>
       </div>
-      <div class="countdown reveal d2" id="countdown" role="timer" aria-label="Temps restant avant le 10 novembre 2026" data-target="2026-11-10T00:00:00+01:00">
+      <div class="countdown" id="countdown" role="timer" aria-label="Temps restant avant le 10 novembre 2026" data-target="2026-11-10T00:00:00+01:00">
         <div><b data-u="d">--</b><span>Jours</span></div>
         <div><b data-u="h">--</b><span>Heures</span></div>
         <div><b data-u="m">--</b><span>Min</span></div>
         <div><b data-u="s">--</b><span>Sec</span></div>
       </div>
     </div>
-    <img class="hero__poster reveal d1" src="assets/img/affiche.jpg" width="1080" height="1440" alt="Affiche TOG&amp;THER : 10-11-26 à thecamp, DJ Bens, Andyman, Taylor Sossa, Scanna">
+    <img class="hero__poster" src="assets/img/affiche.jpg" width="1080" height="1440" alt="Affiche TOG&amp;THER : 10-11-26 à thecamp, DJ Bens, Andyman, Taylor Sossa, Scanna">
   </div>
 </section>
+
+<!-- BANDEAUX LINE-UP -->
+<div class="marquees" aria-hidden="true">
+  <div class="marquee marquee--b"><div class="marquee__track"><div class="marquee__group"><span>Triangle des Bermudes</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg><span>DJ Bens</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg><span>Andyman</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg><span>Taylor Sossa</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg><span>Scanna</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg></div><div class="marquee__group"><span>Triangle des Bermudes</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg><span>DJ Bens</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg><span>Andyman</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg><span>Taylor Sossa</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg><span>Scanna</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg></div></div></div>
+  <div class="marquee marquee--a"><div class="marquee__track"><div class="marquee__group"><span>Triangle des Bermudes</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg><span>DJ Bens</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg><span>Andyman</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg><span>Taylor Sossa</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg><span>Scanna</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg></div><div class="marquee__group"><span>Triangle des Bermudes</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg><span>DJ Bens</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg><span>Andyman</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg><span>Taylor Sossa</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg><span>Scanna</span><svg viewBox="0 0 151 178"><use href="#amp"/></svg></div></div></div>
+</div>
 
 <!-- LINE-UP -->
 <section class="section" id="line-up" aria-labelledby="lineup-titre">
   <div class="wrap">
     <div class="section__head">
-      <span class="tape reveal">Line-up</span>
-      <h2 class="title reveal" id="lineup-titre">Sur scène</h2>
+      <span class="tape">Line-up</span>
+      <h2 class="title" id="lineup-titre">Sur scène</h2>
     </div>
     <div class="headliners">
-      <article class="artist reveal">
+      <article class="artist">
         <div class="torn"><img src="assets/img/triangle-des-bermudes.jpg" width="1600" height="1066" alt="Les trois membres de Triangle des Bermudes" loading="lazy"></div>
         <h3>Triangle des Bermudes</h3>
       </article>
-      <article class="artist reveal d1">
+      <article class="artist">
         <div class="torn"><img src="assets/img/dj-bens.jpg" width="1200" height="937" alt="DJ Bens, casquette noire, la main sur la tête" loading="lazy"></div>
         <h3>DJ Bens</h3>
       </article>
     </div>
-    <div class="support reveal">
+    <div class="support">
       <p class="subtitle">Avec</p>
       <ul>
         <li>Andyman</li>
@@ -351,17 +382,17 @@ body.menu-open{overflow:hidden}
 <section class="section place" id="lieu" aria-labelledby="lieu-titre">
   <div class="wrap">
     <div class="section__head">
-      <span class="tape reveal">Le lieu</span>
-      <h2 class="title reveal" id="lieu-titre" style="text-transform:none">thecamp</h2>
+      <span class="tape">Le lieu</span>
+      <h2 class="title" id="lieu-titre" style="text-transform:none">thecamp</h2>
     </div>
     <div class="gallery">
-      <figure class="reveal"><img src="assets/img/thecamp-canopee.jpg" width="1600" height="900" alt="La canopée de thecamp au coucher du soleil" loading="lazy"><figcaption>La Canopée</figcaption></figure>
-      <figure class="reveal d1"><img src="assets/img/thecamp-dome-soiree.jpg" width="1600" height="900" alt="Soirée sous le Dôme de thecamp, foule et lumières colorées" loading="lazy"><figcaption>Le Dôme</figcaption></figure>
-      <figure class="reveal d2"><img src="assets/img/thecamp-dome-nuit.jpg" width="1500" height="1000" alt="Le Dôme de thecamp illuminé de nuit" loading="lazy"><figcaption>Le Dôme, de nuit</figcaption></figure>
-      <figure class="reveal d1"><img src="assets/img/thecamp-theatre-de-verdure.jpg" width="1200" height="1600" alt="Soirée au Théâtre de verdure de thecamp au coucher du soleil" loading="lazy"><figcaption>Théâtre de verdure</figcaption></figure>
-      <figure class="reveal d2"><img src="assets/img/thecamp-vue-aerienne.jpg" width="1600" height="899" alt="Vue aérienne du site de thecamp dans la garrigue" loading="lazy"><figcaption>Vue aérienne</figcaption></figure>
+      <figure><img src="assets/img/thecamp-canopee.jpg" width="1600" height="900" alt="La canopée de thecamp au coucher du soleil" loading="lazy"><figcaption>La Canopée</figcaption></figure>
+      <figure><img src="assets/img/thecamp-dome-soiree.jpg" width="1600" height="900" alt="Soirée sous le Dôme de thecamp, foule et lumières colorées" loading="lazy"><figcaption>Le Dôme</figcaption></figure>
+      <figure><img src="assets/img/thecamp-dome-nuit.jpg" width="1500" height="1000" alt="Le Dôme de thecamp illuminé de nuit" loading="lazy"><figcaption>Le Dôme, de nuit</figcaption></figure>
+      <figure><img src="assets/img/thecamp-theatre-de-verdure.jpg" width="1200" height="1600" alt="Soirée au Théâtre de verdure de thecamp au coucher du soleil" loading="lazy"><figcaption>Théâtre de verdure</figcaption></figure>
+      <figure><img src="assets/img/thecamp-vue-aerienne.jpg" width="1600" height="899" alt="Vue aérienne du site de thecamp dans la garrigue" loading="lazy"><figcaption>Vue aérienne</figcaption></figure>
     </div>
-    <div class="place__info reveal">
+    <div class="place__info">
       <p>Mardi 10 novembre 2026 · <strong>thecamp</strong></p>
       <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=thecamp" target="_blank" rel="noopener">Itinéraire<span class="sr-only"> (nouvel onglet)</span></a>
     </div>
@@ -371,22 +402,22 @@ body.menu-open{overflow:hidden}
 <!-- BILLETTERIE -->
 <section class="section tickets" id="billetterie" aria-labelledby="billet-titre">
   <div class="wrap">
-    <span class="tape tape--ink reveal" style="background:var(--cream)">10 - 11 - 26</span>
-    <h2 class="title reveal" id="billet-titre">Billetterie</h2>
-    <p class="subtitle reveal">Veille de jour férié à <span style="text-transform:none">thecamp</span></p>
+    <span class="tape tape--ink" style="background:var(--cream)">10 - 11 - 26</span>
+    <h2 class="title" id="billet-titre">Billetterie</h2>
+    <p class="subtitle">Veille de jour férié à <span style="text-transform:none">thecamp</span></p>
     <!-- À REMPLACER : lien de la billetterie -->
-    <a class="btn reveal" href="#" id="lien-billetterie">Réserver ma place</a>
+    <a class="btn" href="#" id="lien-billetterie">Réserver ma place</a>
   </div>
 </section>
 
 <!-- PARTENAIRES -->
 <section class="section partners" id="partenaires" aria-labelledby="part-titre">
   <div class="wrap">
-    <span class="tape reveal">Partenaires</span>
+    <span class="tape">Partenaires</span>
     <h2 class="sr-only" id="part-titre">Partenaires</h2>
     <ul>
-      <li class="reveal"><span class="thecamp" role="img" aria-label="thecamp">thecamp</span>Lieu</li>
-      <li class="reveal d1"><img src="assets/img/nrj.png" width="300" height="300" alt="NRJ" loading="lazy">Partenaire média</li>
+      <li><span class="thecamp" role="img" aria-label="thecamp">thecamp</span>Lieu</li>
+      <li><img src="assets/img/nrj.png" width="300" height="300" alt="NRJ" loading="lazy">Partenaire média</li>
     </ul>
   </div>
 </section>
@@ -447,15 +478,16 @@ body.menu-open{overflow:hidden}
   }
   tick(); var timer = setInterval(tick, 1000);
 
-  /* Apparition au défilement */
-  var els = document.querySelectorAll(".reveal");
+  /* Révélé « papier déchiré » des photos d'artistes */
+  var torn = document.querySelectorAll(".torn");
   if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    els.forEach(function(el){ el.classList.add("is-in"); });
+    torn.forEach(function(el){ el.classList.add("is-in"); });
   } else {
     var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); } });
-    }, {rootMargin:"0px 0px -8% 0px", threshold:.08});
-    els.forEach(function(el){ io.observe(el); });
+      entries.forEach(function(en){ if (en.isIntersecting) { en.target.querySelector(".torn").classList.add("is-in"); io.unobserve(en.target); } });
+    }, {threshold:.25});
+    /* on observe l'article parent : la photo masquée par clip-path n'est pas détectée elle-même */
+    torn.forEach(function(el){ io.observe(el.parentNode); });
   }
 })();
 </script>
