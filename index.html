@@ -110,8 +110,11 @@
       "sponsor": {"@type": "Organization", "name": "NRJ"},
       "offers": [
         {"@type": "Offer", "name": "Early ticket", "price": "39.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
-        {"@type": "Offer", "name": "Individual VIP ticket", "price": "89.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
-        {"@type": "Offer", "name": "Individual backstage ticket", "price": "119.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "Regular ticket", "price": "44.99", "priceCurrency": "EUR", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "Late ticket", "price": "49.99", "priceCurrency": "EUR", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "Last ticket", "price": "54.99", "priceCurrency": "EUR", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "VIP individuel", "price": "89.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "Backstage individuel", "price": "119.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
         {"@type": "Offer", "name": "Pack VIP Bronze (4 pers.)", "price": "420.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
         {"@type": "Offer", "name": "Pack VIP Silver (6 pers.)", "price": "720.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
         {"@type": "Offer", "name": "Pack VIP Gold (10 pers.)", "price": "1300.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
@@ -284,10 +287,19 @@ body.menu-open{overflow:hidden}
 .ticket--feat .ticket__price{color:var(--gold)}
 .ticket--feat .btn{background:var(--gold);border-color:var(--gold);color:var(--ink)}
 @media (min-width:900px){
-  .entries{grid-template-columns:repeat(3,1fr)}
+  .entries{grid-template-columns:repeat(2,1fr)}
   .ticket{grid-template-columns:1fr;align-content:start}
   .ticket .ticket__price{grid-column:1;grid-row:auto;margin-top:.6rem;font-size:2rem}
 }
+.waves{background:var(--ink);color:var(--cream);border-radius:16px;padding:1.3rem;margin-bottom:.8rem;display:grid;gap:1rem}
+.waves__intro{font-weight:500;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;color:var(--gold)}
+.waves ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.waves li{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:.6rem;padding:.8rem;border:1px solid rgba(255,255,238,.18);border-radius:12px}
+.wave__step{grid-row:1/3;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--gold);color:var(--ink);font-weight:700;font-size:.85rem}
+.wave__name{font-weight:700;text-transform:uppercase;font-size:.85rem;letter-spacing:.02em}
+.wave__price{font-weight:700;font-size:1.3rem;color:var(--gold);white-space:nowrap}
+.waves .btn{justify-self:start;background:var(--gold);border-color:var(--gold);color:var(--ink)}
+@media (min-width:900px){.waves ol{grid-template-columns:repeat(4,1fr)}.waves{padding:1.6rem}}
 .packs{display:grid;gap:1.2rem}
 .pack{background:var(--cream);border-radius:16px;padding:1.4rem 1.3rem}
 .pack__sub{opacity:.75;margin:.3rem 0 1rem;font-size:.95rem}
@@ -526,25 +538,29 @@ body.menu-open{overflow:hidden}
     </div>
 
     <h3 class="tickets__cat">Entrées</h3>
+    <div class="waves">
+      <p class="waves__intro">Entrée simple · le prix évolue par paliers</p>
+      <ol>
+        <li><span class="wave__step">1</span><span class="wave__name">Early ticket</span><span class="wave__price">39,99 €</span></li>
+        <li><span class="wave__step">2</span><span class="wave__name">Regular ticket</span><span class="wave__price">44,99 €</span></li>
+        <li><span class="wave__step">3</span><span class="wave__name">Late ticket</span><span class="wave__price">49,99 €</span></li>
+        <li><span class="wave__step">4</span><span class="wave__name">Last ticket</span><span class="wave__price">54,99 €</span></li>
+      </ol>
+      <a class="btn btn--sm" href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener">Réserver mon entrée<span class="sr-only"> sur Shotgun (nouvel onglet)</span></a>
+    </div>
     <ul class="entries">
-        <li class="ticket ticket--feat">
-          <h4>Early ticket</h4>
-          <p>1 entrée</p>
-          <p class="ticket__price">39,99 €</p>
-          <a class="btn btn--sm" href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener">Réserver<span class="sr-only"> : Early ticket sur Shotgun (nouvel onglet)</span></a>
-        </li>
-        <li class="ticket">
-          <h4>Individual VIP ticket</h4>
-          <p>1 entrée VIP</p>
-          <p class="ticket__price">89,99 €</p>
-          <a class="btn btn--sm" href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener">Réserver<span class="sr-only"> : Individual VIP ticket sur Shotgun (nouvel onglet)</span></a>
-        </li>
-        <li class="ticket">
-          <h4>Individual backstage ticket</h4>
-          <p>1 entrée backstage</p>
-          <p class="ticket__price">119,99 €</p>
-          <a class="btn btn--sm" href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener">Réserver<span class="sr-only"> : Individual backstage ticket sur Shotgun (nouvel onglet)</span></a>
-        </li>
+      <li class="ticket">
+        <h4>VIP individuel</h4>
+        <p>1 entrée VIP</p>
+        <p class="ticket__price">89,99 €</p>
+        <a class="btn btn--sm" href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener">Réserver<span class="sr-only"> : VIP individuel sur Shotgun (nouvel onglet)</span></a>
+      </li>
+      <li class="ticket">
+        <h4>Backstage individuel</h4>
+        <p>1 entrée backstage</p>
+        <p class="ticket__price">119,99 €</p>
+        <a class="btn btn--sm" href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener">Réserver<span class="sr-only"> : Backstage individuel sur Shotgun (nouvel onglet)</span></a>
+      </li>
     </ul>
 
     <div class="packs">
