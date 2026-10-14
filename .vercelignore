@@ -7,3 +7,5 @@ scripts
 DEPLOIEMENT.md
 together-army-site.zip
 .htaccess
+_redirects
+_headers

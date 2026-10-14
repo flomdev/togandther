@@ -1,0 +1,7 @@
+# Netlify — redirections
+# www -> domaine principal
+https://www.together.army/*  https://together.army/:splat  301!
+http://www.together.army/*   https://together.army/:splat  301!
+
+# Lien court vers la billetterie Shotgun
+/billetterie  https://shotgun.live/festivals/tog-ther-edition-1  302
