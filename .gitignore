@@ -2,3 +2,5 @@
 .claude/
 *.pdf
 .vercel
+dist/
+together-army-site.zip

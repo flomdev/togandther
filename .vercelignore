@@ -2,3 +2,8 @@
 .claude
 .git
 .DS_Store
+dist
+scripts
+DEPLOIEMENT.md
+together-army-site.zip
+.htaccess
