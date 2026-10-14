@@ -4,35 +4,39 @@
 <meta charset="utf-8">
 <script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TOG&amp;HER · 10.11.26 à thecamp</title>
-<meta name="description" content="TOG&amp;HER, la soirée veille de jour férié du mardi 10 novembre 2026 à thecamp. Line-up : Triangle des Bermudes, DJ Bens, Andyman, Taylor Sossa et Scanna.">
-<meta name="keywords" content="TOG&amp;HER, TOG&amp;HER thecamp, soirée, thecamp, 10 novembre 2026, veille de jour férié, DJ Bens, Triangle des Bermudes, Andyman, Taylor Sossa, Scanna, NRJ">
+<title>TOG&amp;HER · 10.11.26 · thecamp Aix-en-Provence</title>
+<meta name="description" content="TOG&amp;HER : soirée hip-hop, rap, reggaeton et R&amp;B mardi 10 novembre 2026 de 18h à 2h à thecamp, Aix-en-Provence. Triangle des Bermudes, DJ Bens, Andyman, Taylor Sossa, Scanna.">
 <meta name="theme-color" content="#941B0C">
 
 <!-- ================= SEO =================
-     SITE_URL actuel (test) : https://flomdev.github.io/togandther/
-     Au passage sur le domaine définitif : remplacer cette URL partout (canonical, og:url, og:image,
-     twitter:image, JSON-LD, robots.txt, sitemap.xml) et SUPPRIMER la balise robots "noindex" ci-dessous. -->
-<meta name="robots" content="noindex, nofollow">
-<link rel="canonical" href="https://flomdev.github.io/togandther/">
-<link rel="alternate" hreflang="fr" href="https://flomdev.github.io/togandther/">
+     Domaine de production : https://together.army/
+     Les copies de test (vercel.app, github.io…) sont automatiquement en noindex :
+     en-tête X-Robots-Tag via vercel.json + balise ajoutée ci-dessous si l'hôte n'est pas together.army. -->
+<script>if(!/^(www\.)?together\.army$/.test(location.hostname)){var r=document.createElement("meta");r.name="robots";r.content="noindex, nofollow";document.head.appendChild(r)}</script>
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://together.army/">
+<link rel="alternate" hreflang="fr" href="https://together.army/">
+<link rel="alternate" hreflang="x-default" href="https://together.army/">
+<!-- À COMPLÉTER : code de validation Google Search Console (méthode « balise HTML ») -->
+<!-- <meta name="google-site-verification" content="XXXXXXXX"> -->
+<link rel="preconnect" href="https://shotgun.live">
 
 <!-- Partage réseaux sociaux (Open Graph / X) -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TOG&amp;HER">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:url" content="https://flomdev.github.io/togandther/">
-<meta property="og:title" content="TOG&amp;HER · 10.11.26 à thecamp">
-<meta property="og:description" content="Veille de jour férié. Triangle des Bermudes, DJ Bens, Andyman, Taylor Sossa, Scanna.">
-<meta property="og:image" content="https://flomdev.github.io/togandther/assets/img/og-image.jpg">
+<meta property="og:url" content="https://together.army/">
+<meta property="og:title" content="TOG&amp;HER · 10.11.26 · thecamp Aix-en-Provence">
+<meta property="og:description" content="Mardi 10 novembre, 18h–2h, veille de jour férié. Triangle des Bermudes, DJ Bens, Andyman, Taylor Sossa, Scanna. Billets sur Shotgun.">
+<meta property="og:image" content="https://together.army/assets/img/og-image.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="TOG&amp;HER, 10-11-26 à thecamp : Triangle des Bermudes, DJ Bens, Andyman, Taylor Sossa, Scanna">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="TOG&amp;HER · 10.11.26 à thecamp">
-<meta name="twitter:description" content="Veille de jour férié. Triangle des Bermudes, DJ Bens, Andyman, Taylor Sossa, Scanna.">
-<meta name="twitter:image" content="https://flomdev.github.io/togandther/assets/img/og-image.jpg">
+<meta name="twitter:title" content="TOG&amp;HER · 10.11.26 · thecamp Aix-en-Provence">
+<meta name="twitter:description" content="Mardi 10 novembre, 18h–2h, veille de jour férié. Triangle des Bermudes, DJ Bens, Andyman, Taylor Sossa, Scanna. Billets sur Shotgun.">
+<meta name="twitter:image" content="https://together.army/assets/img/og-image.jpg">
 <meta name="twitter:image:alt" content="Visuel TOG&amp;HER, 10-11-26 à thecamp">
 
 <!-- Icônes -->
@@ -48,31 +52,70 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "MusicEvent",
-  "name": "TOG&HER",
-  "description": "Soirée TOG&HER, veille de jour férié, à thecamp. Avec Triangle des Bermudes, DJ Bens, Andyman, Taylor Sossa et Scanna.",
-  "url": "https://flomdev.github.io/togandther/",
-  "startDate": "2026-11-10",
-  "endDate": "2026-11-11",
-  "eventStatus": "https://schema.org/EventScheduled",
-  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-  "inLanguage": "fr",
-  "image": [
-    "https://flomdev.github.io/togandther/assets/img/og-image.jpg",
-    "https://flomdev.github.io/togandther/assets/img/affiche.jpg"
-  ],
-  "location": {
-    "@type": "Place",
-    "name": "thecamp"
-  },
-  "performer": [
-    {"@type": "MusicGroup", "name": "Triangle des Bermudes"},
-    {"@type": "Person", "name": "DJ Bens"},
-    {"@type": "Person", "name": "Andyman"},
-    {"@type": "Person", "name": "Taylor Sossa"},
-    {"@type": "Person", "name": "Scanna"}
-  ],
-  "sponsor": {"@type": "Organization", "name": "NRJ"}
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://together.army/#website",
+      "url": "https://together.army/",
+      "name": "TOG&HER",
+      "inLanguage": "fr-FR",
+      "publisher": {"@id": "https://together.army/#organisateur"}
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://together.army/#organisateur",
+      "name": "TOG&HER",
+      "url": "https://together.army/",
+      "logo": "https://together.army/assets/img/icon-512.png",
+      "email": "togethercollectif@gmail.com",
+      "sameAs": ["https://www.instagram.com/together.officiel"]
+    },
+    {
+      "@type": "MusicEvent",
+      "@id": "https://together.army/#evenement",
+      "name": "TOG&HER — Triangle des Bermudes & DJ Bens",
+      "description": "Soirée hip-hop, rap, reggaeton et R&B, veille de jour férié, à thecamp (Aix-en-Provence). Avec Triangle des Bermudes, DJ Bens, Andyman, Taylor Sossa et Scanna. Réservé aux 18 ans et plus.",
+      "url": "https://together.army/",
+      "startDate": "2026-11-10T18:00:00+01:00",
+      "endDate": "2026-11-11T02:00:00+01:00",
+      "doorTime": "18:00:00+01:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "inLanguage": "fr",
+      "typicalAgeRange": "18-",
+      "image": [
+        "https://together.army/assets/img/og-image.jpg",
+        "https://together.army/assets/img/affiche.jpg"
+      ],
+      "location": {
+        "@type": "Place",
+        "name": "thecamp Hôtel & Lodges",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "550 Rue Denis Papin",
+          "postalCode": "13290",
+          "addressLocality": "Aix-en-Provence",
+          "addressRegion": "Provence-Alpes-Côte d'Azur",
+          "addressCountry": "FR"
+        }
+      },
+      "performer": [
+        {"@type": "MusicGroup", "name": "Triangle des Bermudes"},
+        {"@type": "Person", "name": "DJ Bens"},
+        {"@type": "Person", "name": "Andyman"},
+        {"@type": "Person", "name": "Taylor Sossa"},
+        {"@type": "Person", "name": "Scanna"}
+      ],
+      "organizer": {"@id": "https://together.army/#organisateur"},
+      "sponsor": {"@type": "Organization", "name": "NRJ"},
+      "offers": [
+        {"@type": "Offer", "name": "Entrée générale", "price": "39.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "Pack hôtel", "price": "249.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "Pack VIP", "price": "420.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "Pack Ultra VIP", "price": "590.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"}
+      ]
+    }
+  ]
 }
 </script>
 
@@ -166,6 +209,7 @@ body.menu-open{overflow:hidden}
 .hero h1{width:100%;max-width:640px;margin-top:-.4rem}
 .hero h1 img{width:100%}
 .hero__where{font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-size:clamp(1rem,.9rem + .5vw,1.3rem)}
+.nw{white-space:nowrap}
 .hero__where strong,.place__info strong{text-transform:none;letter-spacing:0}
 .hero__where strong{color:var(--gold);font-weight:700}
 .hero__cta{display:flex;flex-wrap:wrap;gap:.8rem}
@@ -207,7 +251,12 @@ body.menu-open{overflow:hidden}
 .gallery figure:hover img{transform:scale(1.04)}
 .gallery figcaption{position:absolute;left:.7rem;bottom:.7rem;background:rgba(34,9,1,.75);color:var(--cream);font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-size:.72rem;padding:.35em .8em;border-radius:999px}
 .place__info{margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between}
-.place__info p{font-weight:500;text-transform:uppercase;letter-spacing:.05em}
+.place__info address{font-style:normal;font-weight:500;letter-spacing:.02em;line-height:1.5}
+.place__info strong{font-size:1.2rem}
+.access{margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,238,.15);display:grid;gap:1.5rem}
+.access h3{font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:.85rem;color:var(--gold);margin-bottom:.4rem}
+.access ul{list-style:none;margin:0;padding:0;display:grid;gap:.25rem;opacity:.9}
+@media (min-width:768px){.access{grid-template-columns:1.4fr 1fr 1fr}}
 .place__info strong{color:var(--gold)}
 @media (min-width:900px){.gallery{grid-template-columns:2fr 1fr 1fr}.gallery figure:first-child{grid-column:auto;grid-row:span 2;aspect-ratio:auto}}
 
@@ -216,7 +265,15 @@ body.menu-open{overflow:hidden}
 .tickets .wrap{display:grid;gap:1.5rem;justify-items:center}
 .tickets .title{color:var(--red)}
 .tickets .btn{background:var(--red);border-color:var(--red);color:var(--cream)}
-.tickets .subtitle{max-width:32ch}
+.tickets .subtitle{max-width:40ch}
+.tiers{list-style:none;margin:.5rem 0 0;padding:0;width:100%;max-width:900px;display:grid;gap:.6rem;grid-template-columns:1fr}
+.tiers a{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding:1rem 1.2rem;border-radius:14px;background:var(--cream);color:var(--ink);text-decoration:none;text-align:left;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.tiers a:hover{transform:translateY(-2px);box-shadow:0 12px 24px -14px rgba(34,9,1,.6)}
+.tier__name{font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+.tier__price{font-weight:700;color:var(--red);font-size:1.25rem;white-space:nowrap}
+.tier__price small{font-weight:500;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink);opacity:.7}
+.tickets__note{font-size:.9rem;font-weight:500;opacity:.8}
+@media (min-width:768px){.tiers{grid-template-columns:repeat(2,1fr)}.tiers li:first-child{grid-column:1/-1}.tiers li:first-child a{background:var(--ink);color:var(--cream)}.tiers li:first-child .tier__price{color:var(--gold)}.tiers li:first-child small{color:var(--cream)}}
 
 /* Partenaires */
 .partners{text-align:center}
@@ -305,7 +362,7 @@ body.menu-open{overflow:hidden}
         <li><a href="#lieu">Le lieu</a></li>
         <li><a href="#partenaires">Partenaires</a></li>
       </ul>
-      <a class="btn btn--sm" href="#billetterie">Réserver</a>
+      <a class="btn btn--sm" href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener">Réserver<span class="sr-only"> sur Shotgun (nouvel onglet)</span></a>
       <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span></button>
     </nav>
   </div>
@@ -317,7 +374,7 @@ body.menu-open{overflow:hidden}
     <li><a href="#billetterie">Billetterie</a></li>
     <li><a href="#partenaires">Partenaires</a></li>
   </ul>
-  <a class="btn" href="#billetterie">Réserver</a>
+  <a class="btn" href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener">Réserver sur Shotgun</a>
 </div>
 
 <main id="contenu">
@@ -329,9 +386,9 @@ body.menu-open{overflow:hidden}
       <p class="hero__date"><time datetime="2026-11-10">10 - 11 - 26</time></p>
       <span class="tape">Veille de jour férié</span>
       <h1 id="titre"><img src="assets/logo/logo-jaune.svg" alt="TOG&amp;HER" width="876" height="246"></h1>
-      <p class="hero__where">Mardi 10 novembre 2026 · <strong>thecamp</strong></p>
+      <p class="hero__where"><span class="nw">Mardi 10 novembre 2026</span> · <span class="nw">18h – 2h</span><br><strong>thecamp</strong> · Aix-en-Provence</p>
       <div class="hero__cta">
-        <a class="btn" href="#billetterie">Réserver ma place</a>
+        <a class="btn" href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener">Réserver ma place<span class="sr-only"> sur Shotgun (nouvel onglet)</span></a>
         <a class="btn btn--ghost" href="#line-up">Voir le line-up</a>
       </div>
       <div class="countdown" id="countdown" role="timer" aria-label="Temps restant avant le 10 novembre 2026" data-target="2026-11-10T00:00:00+01:00">
@@ -394,8 +451,29 @@ body.menu-open{overflow:hidden}
       <figure><img src="assets/img/thecamp-vue-aerienne.jpg" width="1600" height="899" alt="Vue aérienne du site de thecamp dans la garrigue" loading="lazy"><figcaption>Vue aérienne</figcaption></figure>
     </div>
     <div class="place__info">
-      <p>Mardi 10 novembre 2026 · <strong>thecamp</strong></p>
-      <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=thecamp" target="_blank" rel="noopener">Itinéraire<span class="sr-only"> (nouvel onglet)</span></a>
+      <address>
+        <strong>thecamp Hôtel &amp; Lodges</strong><br>
+        550 Rue Denis Papin, 13290 Aix-en-Provence
+      </address>
+      <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=thecamp%20550%20Rue%20Denis%20Papin%2013290%20Aix-en-Provence" target="_blank" rel="noopener">Itinéraire<span class="sr-only"> (nouvel onglet)</span></a>
+    </div>
+    <div class="access">
+      <div>
+        <h3>Bus</h3>
+        <ul>
+          <li>Centre-ville d'Aix-en-Provence : lignes 18 et 15</li>
+          <li>Marseille Saint-Charles : ligne 53</li>
+          <li>Gare Aix TGV : ligne 211</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Voiture</h3>
+        <ul><li>Parking gratuit à proximité du site (places limitées)</li></ul>
+      </div>
+      <div>
+        <h3>Accès</h3>
+        <ul><li>Événement réservé aux 18 ans et plus</li></ul>
+      </div>
     </div>
   </div>
 </section>
@@ -405,9 +483,16 @@ body.menu-open{overflow:hidden}
   <div class="wrap">
     <span class="tape tape--ink" style="background:var(--cream)">10 - 11 - 26</span>
     <h2 class="title" id="billet-titre">Billetterie</h2>
-    <p class="subtitle">Veille de jour férié à <span style="text-transform:none">thecamp</span></p>
-    <!-- À REMPLACER : lien de la billetterie -->
-    <a class="btn" href="#" id="lien-billetterie">Réserver ma place</a>
+    <p class="subtitle">Mardi 10 novembre · 18h – 2h · <span style="text-transform:none">thecamp</span></p>
+    <ul class="tiers">
+      <li><a href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener"><span class="tier__name">Entrées générales</span><span class="tier__price"><small>dès</small> 39,99 €</span><span class="sr-only"> — réserver sur Shotgun (nouvel onglet)</span></a></li>
+      <li><a href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener"><span class="tier__name">Packs hôtel</span><span class="tier__price"><small>dès</small> 249,99 €</span><span class="sr-only"> — réserver sur Shotgun (nouvel onglet)</span></a></li>
+      <li><a href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener"><span class="tier__name">Packs VIP</span><span class="tier__price"><small>dès</small> 420 €</span><span class="sr-only"> — réserver sur Shotgun (nouvel onglet)</span></a></li>
+      <li><a href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener"><span class="tier__name">Packs Ultra VIP</span><span class="tier__price"><small>dès</small> 590 €</span><span class="sr-only"> — réserver sur Shotgun (nouvel onglet)</span></a></li>
+      <li><a href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener"><span class="tier__name">Les +</span><span class="tier__price"><small>dès</small> 19,99 €</span><span class="sr-only"> — réserver sur Shotgun (nouvel onglet)</span></a></li>
+    </ul>
+    <a class="btn" href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener">Réserver sur Shotgun</a>
+    <p class="tickets__note">Billets revendables en toute sécurité sur l'app Shotgun · 18 ans et plus</p>
   </div>
 </section>
 
@@ -434,7 +519,9 @@ body.menu-open{overflow:hidden}
         <li><a href="#line-up">Line-up</a></li>
         <li><a href="#billetterie">Billetterie</a></li>
         <li><a href="#lieu">Le lieu</a></li>
-        <!-- À COMPLÉTER : contact, réseaux sociaux, mentions légales -->
+        <li><a href="mailto:togethercollectif@gmail.com">Contact</a></li>
+        <li><a href="https://www.instagram.com/together.officiel" target="_blank" rel="noopener">Instagram<span class="sr-only"> (nouvel onglet)</span></a></li>
+        <!-- À COMPLÉTER : mentions légales -->
       </ul>
     </nav>
     <small>© 2026 TOG&amp;HER</small>
