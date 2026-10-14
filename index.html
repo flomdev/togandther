@@ -109,10 +109,17 @@
       "organizer": {"@id": "https://together.army/#organisateur"},
       "sponsor": {"@type": "Organization", "name": "NRJ"},
       "offers": [
-        {"@type": "Offer", "name": "Entrée générale", "price": "39.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
-        {"@type": "Offer", "name": "Pack hôtel", "price": "249.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
-        {"@type": "Offer", "name": "Pack VIP", "price": "420.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
-        {"@type": "Offer", "name": "Pack Ultra VIP", "price": "590.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"}
+        {"@type": "Offer", "name": "Early ticket", "price": "39.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "Individual VIP ticket", "price": "89.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "Individual backstage ticket", "price": "119.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "Pack VIP Bronze (4 pers.)", "price": "420.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "Pack VIP Silver (6 pers.)", "price": "720.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "Pack VIP Gold (10 pers.)", "price": "1300.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "Pack Ultra VIP / Backstage Bronze (4 pers.)", "price": "590.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "Pack Ultra VIP / Backstage Silver (6 pers.)", "price": "990.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "Pack Ultra VIP / Backstage Gold (10 pers.)", "price": "1790.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "Pack hôtel Night (2 pers.)", "price": "249.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"},
+        {"@type": "Offer", "name": "Pack hôtel Night Premium (2 pers.)", "price": "289.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://shotgun.live/festivals/tog-ther-edition-1"}
       ]
     }
   ]
@@ -261,19 +268,49 @@ body.menu-open{overflow:hidden}
 @media (min-width:900px){.gallery{grid-template-columns:2fr 1fr 1fr}.gallery figure:first-child{grid-column:auto;grid-row:span 2;aspect-ratio:auto}}
 
 /* Billetterie */
-.tickets{background:var(--gold);text-align:center}
-.tickets .wrap{display:grid;gap:1.5rem;justify-items:center}
+.tickets{background:var(--gold)}
+.tickets__head{display:grid;gap:1rem;justify-items:center;text-align:center;margin-bottom:clamp(2.5rem,5vw,3.5rem)}
 .tickets .title{color:var(--red)}
-.tickets .btn{background:var(--red);border-color:var(--red);color:var(--cream)}
-.tickets .subtitle{max-width:40ch}
-.tiers{list-style:none;margin:.5rem 0 0;padding:0;width:100%;max-width:900px;display:grid;gap:.6rem;grid-template-columns:1fr}
-.tiers a{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding:1rem 1.2rem;border-radius:14px;background:var(--cream);color:var(--ink);text-decoration:none;text-align:left;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
-.tiers a:hover{transform:translateY(-2px);box-shadow:0 12px 24px -14px rgba(34,9,1,.6)}
-.tier__name{font-weight:700;text-transform:uppercase;letter-spacing:.03em}
-.tier__price{font-weight:700;color:var(--red);font-size:1.25rem;white-space:nowrap}
-.tier__price small{font-weight:500;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink);opacity:.7}
-.tickets__note{font-size:.9rem;font-weight:500;opacity:.8}
-@media (min-width:768px){.tiers{grid-template-columns:repeat(2,1fr)}.tiers li:first-child{grid-column:1/-1}.tiers li:first-child a{background:var(--ink);color:var(--cream)}.tiers li:first-child .tier__price{color:var(--gold)}.tiers li:first-child small{color:var(--cream)}}
+.tickets__intro{font-weight:500;opacity:.85}
+.tickets__cat,.pack__title{font-weight:700;text-transform:uppercase;font-size:clamp(1.3rem,1.1rem + 1vw,1.8rem);color:var(--red);line-height:1.1}
+.tickets__cat{margin-bottom:1rem}
+.entries{list-style:none;margin:0 0 clamp(2.5rem,5vw,3.5rem);padding:0;display:grid;gap:.8rem}
+.ticket{display:grid;grid-template-columns:1fr auto;align-items:center;gap:.2rem 1rem;background:var(--cream);border-radius:16px;padding:1.2rem 1.3rem}
+.ticket h4{font-weight:700;text-transform:uppercase;font-size:1.05rem;letter-spacing:.02em;grid-column:1}
+.ticket p{grid-column:1;opacity:.75;font-size:.95rem}
+.ticket .ticket__price{grid-column:2;grid-row:1/3;opacity:1;font-weight:700;font-size:1.6rem;color:var(--red);white-space:nowrap}
+.ticket .btn{grid-column:1/-1;margin-top:.8rem;background:var(--red);border-color:var(--red);color:var(--cream)}
+.ticket--feat{background:var(--ink);color:var(--cream)}
+.ticket--feat .ticket__price{color:var(--gold)}
+.ticket--feat .btn{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+@media (min-width:900px){
+  .entries{grid-template-columns:repeat(3,1fr)}
+  .ticket{grid-template-columns:1fr;align-content:start}
+  .ticket .ticket__price{grid-column:1;grid-row:auto;margin-top:.6rem;font-size:2rem}
+}
+.packs{display:grid;gap:1.2rem}
+.pack{background:var(--cream);border-radius:16px;padding:1.4rem 1.3rem}
+.pack__sub{opacity:.75;margin:.3rem 0 1rem;font-size:.95rem}
+.pack table{width:100%;border-collapse:collapse;font-size:.95rem}
+.pack th,.pack td{text-align:left;padding:.7rem .4rem;border-top:1px solid rgba(34,9,1,.12);vertical-align:top}
+.pack thead th{border-top:0;font-weight:500;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;opacity:.7;padding-top:0}
+.pack tbody th{font-weight:700;white-space:nowrap}
+.pack .num{text-align:right;white-space:nowrap}
+.pack td.num{font-weight:700;color:var(--red);font-size:1.1rem}
+.pack__note{margin-top:.8rem;font-size:.82rem;opacity:.7}
+@media (max-width:600px){
+  .pack thead{display:none}
+  .pack tr{display:grid;grid-template-columns:1fr auto;border-top:1px solid rgba(34,9,1,.12);padding:.7rem 0}
+  .pack th,.pack td{border:0;padding:0}
+  .pack td:not(.num){grid-column:1/-1;grid-row:2;opacity:.75;font-size:.9rem;margin-top:.2rem}
+  .pack td.num{grid-column:2;grid-row:1}
+}
+@media (min-width:1100px){.packs{grid-template-columns:1fr 1fr}.pack:last-child{grid-column:1/-1}}
+.extra{margin-top:1.2rem;padding:1rem 1.3rem;border:2px dashed rgba(34,9,1,.35);border-radius:16px;font-size:.95rem}
+.tickets__cta{margin-top:clamp(2rem,4vw,3rem);display:grid;gap:1rem;justify-items:center;text-align:center}
+.tickets__cta .btn{background:var(--red);border-color:var(--red);color:var(--cream)}
+.tickets__note{font-size:.9rem;font-weight:500;opacity:.85}
+.tickets__note a{color:var(--red);font-weight:700}
 
 /* Partenaires */
 .partners{text-align:center}
@@ -481,18 +518,84 @@ body.menu-open{overflow:hidden}
 <!-- BILLETTERIE -->
 <section class="section tickets" id="billetterie" aria-labelledby="billet-titre">
   <div class="wrap">
-    <span class="tape tape--ink" style="background:var(--cream)">10 - 11 - 26</span>
-    <h2 class="title" id="billet-titre">Billetterie</h2>
-    <p class="subtitle">Mardi 10 novembre · 18h – 2h · <span style="text-transform:none">thecamp</span></p>
-    <ul class="tiers">
-      <li><a href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener"><span class="tier__name">Entrées générales</span><span class="tier__price"><small>dès</small> 39,99 €</span><span class="sr-only"> — réserver sur Shotgun (nouvel onglet)</span></a></li>
-      <li><a href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener"><span class="tier__name">Packs hôtel</span><span class="tier__price"><small>dès</small> 249,99 €</span><span class="sr-only"> — réserver sur Shotgun (nouvel onglet)</span></a></li>
-      <li><a href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener"><span class="tier__name">Packs VIP</span><span class="tier__price"><small>dès</small> 420 €</span><span class="sr-only"> — réserver sur Shotgun (nouvel onglet)</span></a></li>
-      <li><a href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener"><span class="tier__name">Packs Ultra VIP</span><span class="tier__price"><small>dès</small> 590 €</span><span class="sr-only"> — réserver sur Shotgun (nouvel onglet)</span></a></li>
-      <li><a href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener"><span class="tier__name">Les +</span><span class="tier__price"><small>dès</small> 19,99 €</span><span class="sr-only"> — réserver sur Shotgun (nouvel onglet)</span></a></li>
+    <div class="tickets__head">
+      <span class="tape tape--ink" style="background:var(--cream)">10 - 11 - 26</span>
+      <h2 class="title" id="billet-titre">Billetterie</h2>
+      <p class="subtitle">Mardi 10 novembre · 18h – 2h · <span style="text-transform:none">thecamp</span>, Aix-en-Provence</p>
+      <p class="tickets__intro">Billets en vente sur Shotgun · 18 ans et plus</p>
+    </div>
+
+    <h3 class="tickets__cat">Entrées</h3>
+    <ul class="entries">
+        <li class="ticket ticket--feat">
+          <h4>Early ticket</h4>
+          <p>1 entrée</p>
+          <p class="ticket__price">39,99 €</p>
+          <a class="btn btn--sm" href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener">Réserver<span class="sr-only"> : Early ticket sur Shotgun (nouvel onglet)</span></a>
+        </li>
+        <li class="ticket">
+          <h4>Individual VIP ticket</h4>
+          <p>1 entrée VIP</p>
+          <p class="ticket__price">89,99 €</p>
+          <a class="btn btn--sm" href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener">Réserver<span class="sr-only"> : Individual VIP ticket sur Shotgun (nouvel onglet)</span></a>
+        </li>
+        <li class="ticket">
+          <h4>Individual backstage ticket</h4>
+          <p>1 entrée backstage</p>
+          <p class="ticket__price">119,99 €</p>
+          <a class="btn btn--sm" href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener">Réserver<span class="sr-only"> : Individual backstage ticket sur Shotgun (nouvel onglet)</span></a>
+        </li>
     </ul>
-    <a class="btn" href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener">Réserver sur Shotgun</a>
-    <p class="tickets__note">Billets revendables en toute sécurité sur l'app Shotgun · 18 ans et plus</p>
+
+    <div class="packs">
+      <div class="pack">
+        <h3 class="pack__title">Packs VIP</h3>
+        <p class="pack__sub">Entrées VIP, bouteilles premium, softs au choix et parking</p>
+        <table>
+          <thead><tr><th scope="col">Formule</th><th scope="col">Inclus</th><th scope="col" class="num">Prix</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Bronze · 4 pers.</th><td>4 entrées VIP, 1 bouteille, 1 place de parking</td><td class="num">420 €</td></tr>
+            <tr><th scope="row">Silver · 6 pers.</th><td>6 entrées VIP, 2 bouteilles, 2 places de parking</td><td class="num">720 €</td></tr>
+            <tr><th scope="row">Gold · 10 pers.</th><td>10 entrées VIP, 4 bouteilles, 3 places de parking</td><td class="num">1 300 €</td></tr>
+          </tbody>
+        </table>
+        <p class="pack__note">+ 100 € par personne supplémentaire (2 max.) · Solde à régler à la réservation · Réservation non annulable</p>
+      </div>
+      <div class="pack">
+        <h3 class="pack__title">Packs Ultra VIP / Backstage</h3>
+        <p class="pack__sub">Entrées Ultra VIP, bouteilles premium, softs au choix et parking</p>
+        <table>
+          <thead><tr><th scope="col">Formule</th><th scope="col">Inclus</th><th scope="col" class="num">Prix</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Bronze · 4 pers.</th><td>4 entrées Ultra VIP, 1 bouteille, 1 place de parking</td><td class="num">590 €</td></tr>
+            <tr><th scope="row">Silver · 6 pers.</th><td>6 entrées Ultra VIP, 2 bouteilles, 2 places de parking</td><td class="num">990 €</td></tr>
+            <tr><th scope="row">Gold · 10 pers.</th><td>10 entrées Ultra VIP, 4 bouteilles, 3 places de parking</td><td class="num">1 790 €</td></tr>
+          </tbody>
+        </table>
+        <p class="pack__note">+ 100 € par personne supplémentaire (2 max.) · Solde à régler à la réservation · Réservation non annulable</p>
+      </div>
+      <div class="pack">
+        <h3 class="pack__title">Packs hôtel</h3>
+        <p class="pack__sub">Soirée + nuit à thecamp Hôtel &amp; Lodges, parking inclus</p>
+        <table>
+          <thead><tr><th scope="col">Formule</th><th scope="col">Inclus</th><th scope="col" class="num">Prix</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Night · 2 pers.</th><td>2 entrées, 1 chambre Eco Room, petit-déjeuner inclus</td><td class="num">249,99 €</td></tr>
+            <tr><th scope="row">Night Premium · 2 pers.</th><td>2 entrées, 1 chambre Premium Room</td><td class="num">289,99 €</td></tr>
+          </tbody>
+        </table>
+        <p class="pack__note">Check-in dès 16h · Check-out jusqu'à 11h</p>
+      </div>
+    </div>
+
+    <div class="extra">
+      <p><strong>Option parking + voiturier</strong> · Place à l'intérieur du site thecamp, sans entrée au festival · <strong>19,99 €</strong></p>
+    </div>
+
+    <div class="tickets__cta">
+      <a class="btn" href="https://shotgun.live/festivals/tog-ther-edition-1" target="_blank" rel="noopener">Voir tous les billets sur Shotgun<span class="sr-only"> (nouvel onglet)</span></a>
+      <p class="tickets__note">Billets revendables en toute sécurité sur l'app Shotgun · Infos tables : <a href="https://wa.me/33609211706" target="_blank" rel="noopener">WhatsApp<span class="sr-only"> (nouvel onglet)</span></a></p>
+    </div>
   </div>
 </section>
 
